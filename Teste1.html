@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+
+    <!-- importar a biblioteca chart.js para criar o gráfico.-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+    <script src = "script.js"></script>
+   <!--só pelos caractéres-->
+    <meta charset="UTF-8">
+
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Nome do Jogador -->
+    <p>Insira seu nome</p>
+    <input type="text" id="nomePlayer">
+    <br>   
+    <!-- Input se você ganhou ou não a rodada-->
+
+    <!-- Input de quantos pontos você fez em cada rodada -->
+    <p>Quantos pontos você fez na primeira rodada</p>
+    <input type="number" id="pontosRound1">
+    <br>
+
+    <p>Quantos pontos você fez na segunda rodada</p>
+    <input type="number" id="pontosRound2">
+    <br>
+
+    <p>Quantos pontos você fez na terceira rodada</p>
+    <input type="number" id="pontosRound3">
+    <br>
+
+    <p>Quantos pontos você fez na terceira rodada</p>
+    <input type="number" id="pontosRound4">
+    <br>
+
+    <button type="button" onclick="update()">Atualizar</button>
+
+    <!-- Tabela de pontos com outros jogadores fictícios -->
+    <table style="height: max-content;">
+        <tr>
+            <th>Nome</th>
+            <th>Vitórias</th>
+            <th>Pontos Rodada 1</th>
+            <th>Pontos Rodada 2</th>
+            <th>Pontos Rodada 3</th>
+            <th>Pontos Rodada 4</th>
+        </tr>
+        <tr>
+            <td id = "nome"></td>
+        </tr>
+
+    </table>
+
+    <!--criando gráfico-->
+    <!--<canvas id = "grafico"></canvas>-->
+</body>
