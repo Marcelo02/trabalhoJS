@@ -16,11 +16,13 @@
     var pontosR4 = document.getElementById("pontosR4").value;
     var R4 = document.getElementById("R4");
     var total = document.getElementById("total");
+    
     nomePlayer.innerHTML = nome;
     R1.innerHTML = pontosR1;
     R2.innerHTML = pontosR2;
     R3.innerHTML = pontosR3;
     R4.innerHTML = pontosR4;
+    var totalTable = parseInt(pontosR1)+parseInt(pontosR2)+parseInt(pontosR3)+parseInt(pontosR4);
     total.innerHTML = totalTable;
 
 }   
