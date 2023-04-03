@@ -16,6 +16,56 @@
     var pontosR4 = document.getElementById("pontosR4").value;
     var R4 = document.getElementById("R4");
     var total = document.getElementById("total");
+
+    var data = {
+    labels: ["Round 1","Round 2","Round 3","Round 4"],
+    datasets: [
+    {
+        label: "Você",
+        backgroundColor: "red",
+        borderColor: "red",
+        borderWidth: 1,
+        data: [parseInt(pontosR1),parseInt(pontosR2), parseInt(pontosR3), parseInt(pontosR4)],
+        
+    },
+    { 
+        label: "Raphael kenji",
+        data: [89, 146, 223, 264],
+        backgroundColor: "yellow",
+        borderColor: "yellow",
+    },
+    { 
+        label: "André Oliveira",
+        data: [72, 97, 158, 223],
+        backgroundColor: "blue",
+        borderColor: "blue",
+    },
+    { 
+        label: "Matheus Souza",
+        data: [96, 190, 220, 251],
+        backgroundColor: "blue",
+        borderColor: "blue",
+    },
+    ]
+    };
+    var ctx = document.getElementById("grafico").getContext("2d");
+  var chart = new Chart(ctx, {
+    type: "line",
+    data: data,
+    options: {
+      responsive: true,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
+
     
     nomePlayer.innerHTML = nome;
     R1.innerHTML = pontosR1;
@@ -26,7 +76,6 @@
     total.innerHTML = totalTable;
 
 }   
-    
     </script>
    <!--só pelos caractéres-->
     <meta charset="UTF-8">
