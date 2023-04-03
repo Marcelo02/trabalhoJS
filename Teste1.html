@@ -3,7 +3,28 @@
 
     <!-- importar a biblioteca chart.js para criar o gráfico.-->
     <!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
-    <script src = "script.js"></script>
+    <script>
+    function update(){
+    var nome = document.getElementById("nome").value;
+    var nomePlayer = document.getElementById("nomePlayer");
+    var pontosR1 = document.getElementById("pontosR1").value;
+    var R1 = document.getElementById("R1");
+    var pontosR2 = document.getElementById("pontosR2").value;
+    var R2 = document.getElementById("R2");
+    var pontosR3 = document.getElementById("pontosR3").value;
+    var R3 = document.getElementById("R3");
+    var pontosR4 = document.getElementById("pontosR4").value;
+    var R4 = document.getElementById("R4");
+    var total = document.getElementById("total");
+    nomePlayer.innerHTML = nome;
+    R1.innerHTML = pontosR1;
+    R2.innerHTML = pontosR2;
+    R3.innerHTML = pontosR3;
+    R4.innerHTML = pontosR4;
+    total.innerHTML = totalTable;
+
+}   
+    </script>
    <!--só pelos caractéres-->
     <meta charset="UTF-8">
 
@@ -25,22 +46,22 @@
     <!-- Input de quantos pontos você fez em cada rodada -->
     <form>
         <label>Quantos pontos você fez na primeira rodada: </label>
-        <input type="text" id="pontosR1" name="pontosR1"><br><br>
+        <input type="number" id="pontosR1" name="pontosR1"><br><br>
     </form>
 
     <form>
         <label>Quantos pontos você fez na segunda rodada: </label>
-        <input type="text" id="pontosR2" name="pontosR2"><br><br>
+        <input type="number" id="pontosR2" name="pontosR2"><br><br>
     </form>
 
     <form>
         <label>Quantos pontos você fez na terceira rodada: </label>
-        <input type="text" id="pontosR3" name="pontosR3"><br><br>
+        <input type="number" id="pontosR3" name="pontosR3"><br><br>
     </form>
 
     <form>
         <label>Quantos pontos você fez na quarta rodada: </label>
-        <input type="text" id="pontosR4" name="pontosR4"><br><br>
+        <input type="number" id="pontosR4" name="pontosR4"><br><br>
     </form>
     <button type="button" onclick="update()">Atualizar</button>
 
@@ -48,15 +69,43 @@
     <table style="height: max-content;">
         <tr>
             <th>Nome</th>
-            <th>Vitórias</th>
             <th>Pontos Rodada 1</th>
             <th>Pontos Rodada 2</th>
             <th>Pontos Rodada 3</th>
             <th>Pontos Rodada 4</th>
+            <th>Soma dos pontos</th>
         </tr>
         <tr>
-            <td id = "nome"></td>
+            <td id="nomePlayer"></td>
+            <td id="R1"></td>
+            <td id="R2"></td>
+            <td id="R3"></td>
+            <td id="R4"></td>
+            <td id="total"></td>
         </tr>
+            <td>Rahpael Kenji</td>
+            <td>89</td>
+            <td>57</td>
+            <td>77</td>
+            <td>41</td>
+            <td>264</td>
+        <tr>
+            <td>André "Deco" Oliveira</td>
+            <td>72</td>
+            <td>25</td>
+            <td>61</td>
+            <td>65</td>
+            <td>223</td>
+        </tr>
+        <tr>
+            <td>Matheus "Pato" Souza</td>
+            <td>96</td>
+            <td>94</td>
+            <td>30</td>
+            <td>31</td>
+            <td>251</td>
+        </tr>
+        
 
     </table>
 
