@@ -52,25 +52,16 @@
     },
     ]
     };
-    var ctx = document.getElementById("grafico").getContext("2d");
-  var chart = new Chart(ctx, {
+  var ctx = document.getElementById("grafico").getContext("2d");
+  var chart = new Chart(ctx,
+   {
     type: "line",
     data: data,
     options: {
       responsive: true,
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-            },
-          },
-        ],
-      },
+      scales: { yAxes: [{ticks: {beginAtZero: true,},},],},
     },
   });
-
-    
     nomePlayer.innerHTML = nome;
     var totalTable = parseInt(pontosR1)+parseInt(pontosR2)+parseInt(pontosR3)+parseInt(pontosR4);
     total.innerHTML = totalTable;
@@ -83,6 +74,11 @@
     <style>
         table, th, td {
           border:1px solid black;
+          background-color: #eee;
+          
+        }
+        canvas{
+            border:1px solid black;
         }
     </style>
 </head>
@@ -162,5 +158,5 @@
     </table>
 
     <!--criando gráfico-->
-    <canvas id = "grafico" width="50" height="25"></canvas>
+    <canvas id = "grafico" width="800" height="400"></canvas>
 </body>
