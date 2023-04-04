@@ -16,7 +16,10 @@
     var pontosR4 = document.getElementById("pontosR4").value;
     var R4 = document.getElementById("R4");
     var total = document.getElementById("total");
+    var faction = document.getElementById("factionSelect").value;
+    var factionTable = document.getElementById("factionTable");
     
+    factionTable.innerHTML = faction;
     R1.innerHTML = pontosR1;
     R2.innerHTML = pontosR2;
     R3.innerHTML = pontosR3;
@@ -84,12 +87,26 @@
 </head>
 
 <body>
+    <h1>Organizador de torneios</h1>
+    <p>Esse site tem como intuito você subir seus dados de um torneio de jogo de estratégia, incluindo a facção que você selecionou, quantos pontos você fez em cada rodada, você será comparado com outros jogadores que já registraram seus resultados, basta preencher os dados e clicar no botão "atualizar"</p>
     <!-- Nome do Jogador -->
     <form>
         <label>Nome: </label>
         <input type="text" id="nome" name="nome"><br><br>
     </form>
     <!-- Input se você ganhou ou não a rodada-->
+
+    <label>Qual facção você jogou: </label>
+<select name="faction" id="factionSelect">
+
+    <option value="">--Clique para escolher--</option>
+    <option value="Imperial Fists">Imperial Fists</option>
+    <option value="Dark Angels">Dark Angels</option>
+    <option value="Genestealer Cults">Genestealer Cults</option>
+    <option value="Raven Guard">Raven Guard</option>
+    <option value="Adeptus Mechanicus">Adeptus Mechanicus</option>
+    <option value="Chaos Daemons">Goldfish</option>
+</select><br><br>
 
     <!-- Input de quantos pontos você fez em cada rodada -->
     <form>
@@ -117,6 +134,7 @@
     <table style="height: max-content;">
         <tr>
             <th>Nome</th>
+            <th>Facção</th>
             <th>Pontos Rodada 1</th>
             <th>Pontos Rodada 2</th>
             <th>Pontos Rodada 3</th>
@@ -125,6 +143,7 @@
         </tr>
         <tr>
             <td id="nomePlayer"></td>
+            <td id="factionTable"></td>
             <td id="R1"></td>
             <td id="R2"></td>
             <td id="R3"></td>
@@ -132,6 +151,7 @@
             <td id="total"></td>
         </tr>
             <td>Rahpael Kenji</td>
+            <td>Necrons</td>
             <td>89</td>
             <td>57</td>
             <td>77</td>
@@ -139,6 +159,7 @@
             <td>264</td>
         <tr>
             <td>André "Deco" Oliveira</td>
+            <td>Tyranids</td>
             <td>72</td>
             <td>25</td>
             <td>61</td>
@@ -147,6 +168,7 @@
         </tr>
         <tr>
             <td>Matheus "Pato" Souza</td>
+            <td>Orks</td>
             <td>96</td>
             <td>94</td>
             <td>30</td>
